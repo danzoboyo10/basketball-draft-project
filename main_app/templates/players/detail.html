@@ -11,6 +11,10 @@
     {% else %}
     <p>Age: n/a</p>
     {% endif %}
+    <div class="card-action">
+      <a href="{% url 'players_update' player.id %}">Edit</a>
+      <a href="{% url 'players_delete' player.id %}">Delete</a>
+    </div>
   </div>
 </div>
 

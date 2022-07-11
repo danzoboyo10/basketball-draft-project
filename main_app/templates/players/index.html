@@ -3,7 +3,7 @@
 
 {% for player in players %}
 <div class="card">
-  <a href ="{% url 'detail' player.id %}"></a>
+  <a href ="{% url 'detail' player.id %}">
   <div class="card-content">
     <span class="card-title">{{ player.name }}</span>
     <p>College: {{ player.college }}</p>
