@@ -17,6 +17,53 @@
     </div>
   </div>
 </div>
+<div class="col s6">
+  <form action="{% url 'add_game' player.id %}" method="post">
+    {% csrf_token %} {{ games_form.as_p }}
+    <input type="submit" class="btn" value="Add Game" />
+  </form>
 
+  <br />
+  {% if player.no_more_games_today %}
+  <div class="card-panel teal-text center-align">
+    {{player.name }} has played all games today
+  </div>
+  {% else %}
+  <div class="card-pane red-text center-align">
+    {{player.name}} might have more games today
+  </div>
+  {% endif %}
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Game</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for game in player.game_set.all %}
+      <tr>
+        <td>{{game.date}}</td>
+        <td>{{game.get_games_display}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  <script>
+    var dateEl = document.getElementById('id_date');
+    M.Datepicker.init(dateEl, {
+      format: 'yyyy-mm-dd',
+      defaultDate: new Date(),
+      setDefaultDate: true,
+      autoClose: true
+    });
+
+    var selectEl = document.getElementById('id_meal');
+    M.FormSelect.init(selectEl);
+  </script>
 {% endblock %}
+</div>
+
 
