@@ -10,7 +10,13 @@ urlpatterns = [
     path('players/<int:pk>/update/', views.PlayerUpdate.as_view(), name='players_update'),
     path('players/<int:pk>/delete/', views.PlayerDelete.as_view(), name='players_delete'),
     path('players/<int:player_id>/add_game/', views.add_game, name='add_game'),
-
-
+    path('players/<int:player_id>/assoc_shoe/<int:shoe_id>/', views.assoc_shoe, name='assoc_shoe'),
+    path('players/<int:player_id>/assoc_shoe/<int:shoe_id>/delete/', views.assoc_shoe, name='assoc_shoe_delete'),
+    path('shoes/', views.ShoeList.as_view(), name='shoes_index'),
+    path('shoes/<int:pk>/', views.ShoeDetail.as_view(), name='shoes_detail'),
+    path('shoes/create/', views.ShoeCreate.as_view(), name='shoes_create'),
+    path('shoes/<int:pk/update/', views.ShoeUpdate.as_view(), name='shoes_update'),
+    path('shoes/<int:pk/delete/', views.ShoeDelete.as_view(), name='shoes_delete'),
+    
 
 ]

@@ -9,12 +9,28 @@ GAMEOPTIONS = (
 )
 
 # Create your models here.
+
+class Shoes(models.Model):
+  name = models.CharField(max_length=50)
+  size = models.IntegerField()
+
+  def __str__(self):
+    return f'{self.name} {self.size}'
+
+  def get_absolute_url(self):
+    return reverse('shoes_detail', kwargs={'pk': self.id})
+
+
+
+
 class Player(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
     college = models.CharField(max_length=50)
     ppg = models.IntegerField()
+    shoes = models.ManyToManyField(Shoes)
 
+    
     def no_more_games_today(self):
       return self.games_set.filter(date=date.today()).count() >= len(GAMEOPTIONS
     )
