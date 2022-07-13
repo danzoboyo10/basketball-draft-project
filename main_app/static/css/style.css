@@ -1,7 +1,10 @@
 body {
-  background-color: aqua;
+  background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg");
+  background-size: cover;
   display: flex;
   min-height: 100vh;
+  color: whitesmoke;
+  font: bold;
   flex-direction: column;
 }
 
