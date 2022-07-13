@@ -68,8 +68,29 @@
   </div>
 </div>
 <hr />
+<div class = "row">
 
-
+  
+  <div class="col s6">
+    <h3> {{player.name}}'s Shoes</h3>
+    {% if player.shoes.count %} {% for shoe in player.shoes.all %}
+    <div class="card-content">
+      <span class="card-title">
+        A <span style="size: {{ player.size }}"> {{ player.size }}</span>
+      {{ player.name }}
+      </span>
+    </div>
+    <div class="card-action">
+      <form action="{% url 'assoc_player' player.id shoe.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn">Add</button>
+      </form>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <h5>{{player.name}} Already Has All shoes Available</h5>
+  {% endif %}
+</div>
     <script>
       var dateEl = document.getElementById('id_date');
       M.Datepicker.init(dateEl, {
