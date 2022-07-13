@@ -1,5 +1,7 @@
 body {
-  background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg");
+  /* background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg"); */
+  background-color: black
+  ;
   background-size: cover;
   display: flex;
   min-height: 100vh;
@@ -11,7 +13,9 @@ body {
 main {
   flex: 1 0 auto;
 }
-
+label {
+  color: whitesmoke
+}
 footer {
   padding-top: 0;
   text-align: right;

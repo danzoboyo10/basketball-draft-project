@@ -1,8 +1,9 @@
 from django.db import models
 from django.urls import reverse
 from datetime import date
+from django.contrib.auth.models import User
 
-GAMEOPTIONS = (
+OPTIONS = (
     ('A', 'Away'),
     ('H', 'Home'),
     ('P', 'Playoffs')
@@ -29,10 +30,11 @@ class Player(models.Model):
     college = models.CharField(max_length=50)
     ppg = models.IntegerField()
     shoes = models.ManyToManyField(Shoes)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     
     def no_more_games_today(self):
-      return self.games_set.filter(date=date.today()).count() >= len(GAMEOPTIONS
+      return self.games_set.filter(date=date.today()).count() >= len(OPTIONS
     )
 
     def __str__(self):
@@ -45,10 +47,8 @@ class Games(models.Model):
   date = models.DateField('Game date')
   game = models.CharField(
       max_length=1,
-    choices=GAMEOPTIONS
-  ,
-    default=GAMEOPTIONS
-  [0][0]
+      choices=OPTIONS,
+      default=OPTIONS[0][0]
   )
 
   player = models.ForeignKey(Player, on_delete=models.CASCADE)
