@@ -17,8 +17,6 @@ S3_BASE_URL = 'https://s3.us-east-1.amazonaws.com/'
 BUCKET = 'bball-proj'
 
 
-
-
 def home(request):
   return render(request, 'home.html')
 
@@ -27,7 +25,7 @@ def about(request):
 
 @login_required
 def players_index(request):
-  players = Player.objects.all()
+  players = Player.objects.filter(user=request.user)
   return render(request, 'players/index.html', { 'players': players })
 
 @login_required
@@ -88,23 +86,22 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
-
-
 class PlayerCreate(LoginRequiredMixin, CreateView):
   model = Player
-  fields = '__all__'
-  def form_valid(self, form):
-    form.instance.user = self.request.user
-    return super().form_valid(form)
+  fields = ['name', 'age', 'college', 'ppg']
   success_url = '/players/'
+
+  def form_valid(self, form):
+    form.instance.user = self.request.user  
+    return super().form_valid(form)
+
+
 
 class PlayerUpdate(LoginRequiredMixin, UpdateView):
   model = Player
-  fields = '__all__'
+  fields = ['name', 'age', 'college', 'ppg']
   success_url = '/players/'
-  def form_valid(self, form):
-    form.instance.user = self.request.user
-    return super().form_valid(form)
+  
 
 class PlayerDelete(LoginRequiredMixin, DeleteView):
   model = Player
@@ -120,9 +117,10 @@ class ShoeDetail(LoginRequiredMixin, DetailView):
   model = Shoes
   template_name = 'shoes/detail.html'
 
-class ShoeCreate (LoginRequiredMixin, CreateView):
-  model = Shoes
-  fields = '__all__'
+
+class ShoeCreate(LoginRequiredMixin, CreateView):
+    model = Shoes
+    fields = ['name', 'size']
 
 
 class ShoeUpdate(LoginRequiredMixin, UpdateView):

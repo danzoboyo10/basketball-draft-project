@@ -1,7 +1,8 @@
 {% extends 'base.html' %} {% block content %}
 
-  <h1> Player Details </h1>
-  <div class = "col s6">
+<h1> Player Details </h1>
+<div class="row">
+  <div class="col s6">
     <div class="card">
       <div class="card-content">
         <span class="card-title">{{ player.name }}</span>
@@ -28,7 +29,7 @@
       {{player.name }} has played all games today
     </div>
     {% else %}
-    <div class="card-pane red-text center-align">
+    <div class="card-panel red-text center-align">
       {{player.name}} might have more games today
     </div>
     {% endif %}
@@ -39,6 +40,7 @@
     {% endfor %}
     <form
       action="{% url 'add_photo' player.id %}"
+      class="card-panel"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -69,19 +71,40 @@
 </div>
 <hr />
 <div class = "row">
-
-  
   <div class="col s6">
-    <h3> {{player.name}}'s Shoes</h3>
+    <h3> {{ player.name }}'s Shoes</h3>
     {% if player.shoes.count %} {% for shoe in player.shoes.all %}
-    <div class="card-content">
-      <span class="card-title">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">
         A <span style="size: {{ player.size }}"> {{ player.size }}</span>
-      {{ player.name }}
+        {{ player.name }}
       </span>
     </div>
     <div class="card-action">
-      <form action="{% url 'assoc_player' player.id shoe.id %}" method="post">
+      <form action="{% url 'assoc_player_delete' player.id shoe.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn">Remove</button>
+      </form>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <h5> No Shoes :( </h5>
+  {% endif %}
+</div>
+<div class="col s6">
+  <h3>Available Shoes</h3>
+  {% if shoes.count %} {% for shoe in shoes.all %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">
+        A <span style="color: {{ shoe.size }}">{{ shoe.size }}</span>
+        {{ shoe.name }}
+      </span>
+    </div>
+
+    <div class="card-action">
+      <form action="{% url 'assoc_shoe' player.id shoe.id %}" method="post">
         {% csrf_token %}
         <button type="submit" class="btn">Add</button>
       </form>
@@ -91,6 +114,7 @@
   <h5>{{player.name}} Already Has All shoes Available</h5>
   {% endif %}
 </div>
+
     <script>
       var dateEl = document.getElementById('id_date');
       M.Datepicker.init(dateEl, {
