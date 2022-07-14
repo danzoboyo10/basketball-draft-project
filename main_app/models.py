@@ -21,9 +21,6 @@ class Shoes(models.Model):
   def get_absolute_url(self):
     return reverse('shoes_detail', kwargs={'pk': self.id})
 
-
-
-
 class Player(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
@@ -34,8 +31,7 @@ class Player(models.Model):
 
     
     def no_more_games_today(self):
-      return self.games_set.filter(date=date.today()).count() >= len(OPTIONS
-    )
+      return self.games_set.filter(date=date.today()).count() >= len(OPTIONS)
 
     def __str__(self):
       return self.name

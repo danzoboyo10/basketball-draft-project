@@ -1,22 +1,69 @@
 body {
-  /* background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg"); */
-  background-color: black
-  ;
+  background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg");  
   background-size: cover;
   display: flex;
   min-height: 100vh;
-  color: whitesmoke;
+  color: white;
   font: bold;
+  font-weight: bold;
   flex-direction: column;
+}
+a.left.brand-logo {
+  color: whitesmoke;
 }
 
 main {
   flex: 1 0 auto;
 }
 label {
-  color: whitesmoke
+  color: whitesmoke;
+  font-size: 15px;
 }
 footer {
   padding-top: 0;
   text-align: right;
+}
+div.nav-wrapper {
+  background-color: grey;
+
+}
+footer.page-footer {
+  background-color: grey;
+}
+h1 {
+  font-weight: bold;
+}
+
+input {
+  color: white;
+}
+.card-title {
+  color: black
+}
+p {
+  color: black;
+}
+#bron {
+  width: 40%;
+}
+#bball-list {
+  text-align: center;
+}
+input#id_name {
+  background-color: grey
+}
+input#id_age {
+  background-color: grey
+}
+input#id_college {
+  background-color: grey
+}
+input#id_ppg {
+  background-color: grey
+}
+input#id_shoes {
+  background-color: grey
+}
+#aboutpar {
+  color: aliceblue;
 }
