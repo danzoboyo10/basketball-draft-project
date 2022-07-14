@@ -11,7 +11,8 @@
         {{shoes.name}}</span>
     </div>
     <div class="card-action">
-    
+      <a href="{% url 'shoes_update' shoes.id %}">Edit</a>
+        <a href="{% url 'shoes_delete' shoes.id %}">Delete</a>
     </div> 
   </a>
 </div>

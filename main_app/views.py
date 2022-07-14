@@ -121,6 +121,12 @@ class ShoeDetail(LoginRequiredMixin, DetailView):
 class ShoeCreate(LoginRequiredMixin, CreateView):
     model = Shoes
     fields = ['name', 'size']
+    success_url = '/shoes/'
+
+
+    def form_valid(self, form):
+      form.instance.user = self.request.user  
+      return super().form_valid(form)
 
 
 class ShoeUpdate(LoginRequiredMixin, UpdateView):
