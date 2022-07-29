@@ -135,6 +135,7 @@ class ShoeUpdate(LoginRequiredMixin, UpdateView):
 
 class ShoeDelete(LoginRequiredMixin, DeleteView):
   model = Shoes
+  fields = '__all__'
   success_url = '/shoes/'
 
 
