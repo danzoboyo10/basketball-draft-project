@@ -9,7 +9,8 @@
       <p>College: {{ player.college }}</p>
       <p>PPG: {{ player.ppg }}</p>
       {% if player.age > 0 %}
-      <p>Age: {{ player.age }}</p>
+      <p>Age: {{ player.age }}</p> <br>
+      <button class="detailsBtn"> View Details </button>
       {% else %}
       <p>Age: n/a</p>
       {% endif %}

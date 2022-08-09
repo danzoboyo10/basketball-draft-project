@@ -5,3 +5,4 @@ class GamesForm(ModelForm):
   class Meta:
     model = Games
     fields = ['date', 'game']
+

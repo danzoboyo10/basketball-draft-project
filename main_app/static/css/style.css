@@ -6,8 +6,6 @@ body {
   display: flex;
   min-height: 100vh;
   color: white;
-  font: bold;
-  font-weight: bold;
   flex-direction: column;
 }
 
@@ -22,8 +20,6 @@ a.left.brand-logo {
   text-shadow: 2px 1px orange;
   font-size: 20px;
 }
-
-
 
 main {
   flex: 1 0 auto;
@@ -202,4 +198,44 @@ input#id_shoes {
 
 .aboutParagraph {
   color: white;
+}
+
+#ourStory {
+  text-align: center;
+}
+
+.detailsBtn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.addShoesBtn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.updateShoeBtn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  -webkit-transition: background-color .2s ease-out;
+  transition: background-color .2s ease-out;
+  padding: 5px;
+  cursor: pointer;
 }

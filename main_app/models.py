@@ -19,7 +19,7 @@ class Shoes(models.Model):
     return f'{self.name} {self.size}'
 
   def get_absolute_url(self):
-    return reverse('shoes_detail', kwargs={'pk': self.id})
+    return reverse('shoes_detail', kwargs={'shoe_id': self.id})
 
 class Player(models.Model):
     name = models.CharField(max_length=50)
@@ -62,7 +62,6 @@ class Photo(models.Model):
 
   def __str__(self):
     return f"Photo for player_id: {self.player_id} @{self.url}"
-
 
 
 

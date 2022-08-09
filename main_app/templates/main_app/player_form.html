@@ -4,13 +4,13 @@
 <h1 class="editPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Edit  {{object.name}} <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i></h1>
 {% else %}
 
-<h1 class = "addPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Add player <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i> </h1>
+<h1 class = "addPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Add a Player <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i> </h1>
 {% endif %}
 <form action="" method="post">
   {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>
-  <input type="submit" value="Submit!" class="btn" />
+  <input type="submit" value="Update Player" class="btn" />
 </form>
 {% endblock %}

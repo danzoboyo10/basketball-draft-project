@@ -123,7 +123,6 @@ class ShoeCreate(LoginRequiredMixin, CreateView):
     fields = ['name', 'size']
     success_url = '/shoes/'
 
-
     def form_valid(self, form):
       form.instance.user = self.request.user  
       return super().form_valid(form)
@@ -132,13 +131,12 @@ class ShoeCreate(LoginRequiredMixin, CreateView):
 class ShoeUpdate(LoginRequiredMixin, UpdateView):
   model = Shoes
   fields = ['name', 'size']
+  success_url = '/shoes/'
 
 class ShoeDelete(LoginRequiredMixin, DeleteView):
   model = Shoes
   fields = '__all__'
   success_url = '/shoes/'
-
-
 
   
 
