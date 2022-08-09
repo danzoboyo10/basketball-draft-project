@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1> Player Details </h1>
+<h1 class = "myPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i>  My Player Details <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i></h1>
 <div class="row">
   <div class="col s6">
     <div class="card">
@@ -72,7 +72,7 @@
 <hr />
 <div class = "row">
   <div class="col s6">
-    <h3> {{ player.name }}'s Shoes</h3>
+    <h3> <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i> {{ player.name }}'s Shoes</h3>
     {% if player.shoes.count %} {% for shoe in player.shoes.all %}
     <div class="card">
       <div class="card-content">
@@ -89,11 +89,11 @@
     </div>
   </div>
   {% endfor %} {% else %}
-  <h5> No Shoes :( </h5>
+  <h5> No Shoes :/  Go and add some! </h5>
   {% endif %}
 </div>
 <div class="col s6">
-  <h3>Available Shoes</h3>
+  <h3><i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i> Available Shoes</h3>
   {% if shoes.count %} {% for shoe in shoes.all %}
   <div class="card">
     <div class="card-content">

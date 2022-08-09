@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 body {
   background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg");  
   background-size: cover;
@@ -8,28 +10,50 @@ body {
   font-weight: bold;
   flex-direction: column;
 }
+
 a.left.brand-logo {
-  color: whitesmoke;
+  color: black;
+  text-shadow: .5px .5px orange;
+  padding-left: 20px;
 }
+
+.navItemStyling {
+  color: white;
+  text-shadow: 2px 1px orange;
+  font-size: 20px;
+}
+
+
 
 main {
   flex: 1 0 auto;
 }
+
 label {
   color: whitesmoke;
   font-size: 15px;
 }
+
 footer {
   padding-top: 0;
   text-align: right;
 }
+
 div.nav-wrapper {
   background-color: grey;
 
 }
+
 footer.page-footer {
   background-color: grey;
+  padding-right: 10px;
+  color: black;
+  text-shadow: .5px .5px orange;
+  padding-bottom: 3px;
+  padding-right: 40px;
+  font-size: 20px;
 }
+
 h1 {
   font-weight: bold;
 }
@@ -37,33 +61,145 @@ h1 {
 input {
   color: white;
 }
+
 .card-title {
   color: black
 }
+
 p {
   color: black;
 }
 #bron {
-  width: 40%;
+  height: 550px;
+  padding-top: 30px;
+  display: block;
+  width: 60%;
+  /* padding-right: 45px; */
+  float: inline-end;
 }
 #bball-list {
   text-align: center;
 }
-input#id_name {
-  background-color: grey
-}
-input#id_age {
-  background-color: grey
-}
-input#id_college {
-  background-color: grey
+/* input#id_name {
+  background-color: black;
+} */
+/* input#id_age {
+  background-color: white
+} */
+/* input#id_college {
+  background-color: white
 }
 input#id_ppg {
-  background-color: grey
+  background-color: white
 }
 input#id_shoes {
-  background-color: grey
+  background-color: white
 }
 #aboutpar {
-  color: aliceblue;
+  color: white;
+} */
+
+#aboutNav {
+  color: white;
+  text-shadow: 2px 1px orange;
+  font-size: 20px;
+}
+
+#loginNav {
+  color: white;
+  text-shadow: 2px 1px orange;
+  font-size: 20px;
+}
+
+#signupNav {
+  color: white;
+  text-shadow: 2px 1px orange;
+  font-size: 20px;
+}
+
+#AttentionHead {
+  color: whitesmoke;
+  text-shadow: 2px 1px orange;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+#signupIf {
+  color: whitesmoke;
+  text-shadow: 2px 1px grey;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  float: left;
+  padding-right: 50px;
+}
+
+.fas fa-basketball-ball {
+  color: aqua;
+}
+
+.leftBball {
+  color: orange;
+  display: inline;
+}
+
+.rightBball {
+  color: orange;
+  display: inline;
+  padding-left: 5px;
+  padding-bottom: 9px;
+}
+
+.leftBallHead {
+  display: inline;
+  color: orange;
+}
+
+.rightBballHead {
+  display: inline;
+  color: orange;
+}
+.exclamationMark1 {
+  display: inline;
+  color: red;
+}
+.exclamationMark2 {
+  display: inline;
+  color: white;
+}
+.exclamationMark3 {
+  display: inline;
+  color: blue;
+}
+
+.shoeHeader {
+  text-align: center;
+}
+
+.shoeDetailsHead {
+  text-align: center;
+}
+
+.addShoeHead {
+  text-align: center;
+}
+
+.editShoeHead {
+  text-align: center;
+}
+
+.addPlayerHeader {
+  text-align: center;
+}
+
+.myPlayerHeader {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.editPlayerHeader {
+  text-align: center;
+}
+
+.aboutParagraph {
+  color: white;
 }

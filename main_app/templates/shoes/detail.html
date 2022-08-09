@@ -1,14 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1> Shoe Details </h1>
+<h1 class = "shoeDetailsHead"> <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i>
+  Shoe Details <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i> </h1>
 
 <div class="card">
   <a href="{% url 'shoes_detail' shoes.id %}">
     <div class="card-content">
-      <span class="card-title"
-        >A
-        <span>{{ shoes.size }}</span>
-        {{shoes.name}}</span>
+      <span class="card-title">
+        <span>SIZE: {{ shoes.size }}</span> <br>
+        SHOE NAME: {{shoes.name}}</span>
     </div>
     <div class="card-action">
       <a href="{% url 'shoes_update' shoes.id %}">Edit</a>
@@ -18,3 +18,4 @@
 </div>
 
 {% endblock %}
+

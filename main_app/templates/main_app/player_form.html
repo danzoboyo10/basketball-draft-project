@@ -1,10 +1,10 @@
 {% extends 'base.html' %} 
 {% block content %}
 {% if object %}
-<h1> Edit <span class = "teal-text"> {{object.name}}</span></h1>
+<h1 class="editPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Edit  {{object.name}} <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i></h1>
 {% else %}
 
-<h1> Add player</h1>
+<h1 class = "addPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Add player <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i> </h1>
 {% endif %}
 <form action="" method="post">
   {% csrf_token %}
