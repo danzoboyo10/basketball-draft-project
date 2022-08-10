@@ -239,3 +239,11 @@ input#id_shoes {
   padding: 5px;
   cursor: pointer;
 }
+
+#aboutParagraph {
+  font-size: 45px;
+  color: white;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+
+} 
