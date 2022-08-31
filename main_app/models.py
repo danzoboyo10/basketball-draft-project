@@ -40,7 +40,7 @@ class Player(models.Model):
       return reverse('detail', kwargs={'player_id': self.id})
 
 class Games(models.Model):
-  date = models.DateField('Game date')
+  date = models.DateField()
   game = models.CharField(
       max_length=1,
       choices=OPTIONS,
@@ -51,6 +51,7 @@ class Games(models.Model):
 
   def __str__(self):
     return f"{self.get_game_display()} on {self.date}"
+
   
   class Meta:
     ordering = ['-date']

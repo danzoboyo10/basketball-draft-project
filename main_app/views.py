@@ -31,10 +31,13 @@ def players_index(request):
 @login_required
 def players_detail(request, player_id):
   player = Player.objects.get(id=player_id)
+  shoes_player_doesnt_have = Shoes.objects.exclude(id__in = player.shoes.all().values_list('id'))
   games_form = GamesForm()
   return render(request, 'players/detail.html',{
     'player': player, 'games_form': games_form,
+    'shoes': shoes_player_doesnt_have
     })
+
 
 @login_required
 def add_game(request, player_id):
