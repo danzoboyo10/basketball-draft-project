@@ -13,7 +13,7 @@ Basektballs_My_Player is a Python Django based full stack web application that a
 * Materialize
 ---
 ## Screenshots
-![Screen Shot 2022-09-04 at 6 36 22 PM](https://user-images.githubusercontent.com/101149907/188336062-c7c67fb0-5e8e-43bc-a1e0-0f46cf772096.png)
+![Screen Shot 2022-09-04 at 6 40 15 PM](https://user-images.githubusercontent.com/101149907/188336158-d7811048-75d3-41e2-b829-afc958ce38ec.png)
 ![Screen Shot 2022-09-04 at 6 36 57 PM](https://user-images.githubusercontent.com/101149907/188336064-ad2cde43-c77e-4e80-9a01-acad9d98c92b.png)
 
 
