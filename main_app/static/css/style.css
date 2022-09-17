@@ -19,6 +19,7 @@ a.left.brand-logo {
   color: white;
   text-shadow: 2px 1px orange;
   font-size: 20px;
+  display: inline;
 }
 
 main {
@@ -28,6 +29,14 @@ main {
 label {
   color: whitesmoke;
   font-size: 15px;
+  text-transform: uppercase;
+}
+
+.playerKey {
+  color: rgb(251, 182, 22);
+  font-size: 15px;
+  display: inline-block;
+  padding-left: 7px;
 }
 
 footer {
@@ -57,9 +66,17 @@ h1 {
 input {
   color: white;
 }
-
 .card-title {
-  color: black
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.card-titlePlayer {
+text-align: center;  
+color: black;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 p {
@@ -244,7 +261,12 @@ input#id_shoes {
   font-size: 45px;
   color: white;
   font-family: 'Poppins', sans-serif;
-  
-
-
 } 
+
+.btn {
+  margin-bottom: 10px;
+}
+
+.detailsBtn {
+  margin-top: 10px;
+}

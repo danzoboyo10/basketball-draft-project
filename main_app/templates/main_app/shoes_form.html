@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %} {% if object %}
 <h1 class="editShoeHead"> <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i> Edit {{ object.name }} <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i> </h1>
 {% else %}
-<h1 class = "addShoeHead"><i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i> Add Shoe <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i></h1>
+<h1 class = "addShoeHead"><i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i> Add a Shoe <i class="em em-athletic_shoe" aria-role="presentation" aria-label="ATHLETIC SHOE"></i></i></h1>
 {% endif %}
 <form action="" method="post">
   {% csrf_token %}
@@ -11,7 +11,7 @@
   <input
     class="updateShoeBtn"
     type="submit"
-    value="{% if object %} Update Shoes {% else %} ADD SHOE {% endif %}"
+    value="{% if object %} SUBMIT SHOE {% else %} SUBMIT SHOE {% endif %}"
   />
 </form>
 

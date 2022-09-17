@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from django.db import models
 from django.urls import reverse
 from datetime import date
@@ -13,8 +14,8 @@ OPTIONS = (
 
 class Shoes(models.Model):
   name = models.CharField(max_length=50)
-  size = models.IntegerField()
-
+  size = models.FloatField(null = True)
+ 
   def __str__(self):
     return f'{self.name} {self.size}'
 
@@ -24,8 +25,14 @@ class Shoes(models.Model):
 class Player(models.Model):
     name = models.CharField(max_length=50)
     age = models.IntegerField()
-    college = models.CharField(max_length=50)
-    ppg = models.IntegerField()
+    height = models.CharField(max_length= 50, null=True)
+    weight = models.CharField(max_length=50, null=True)
+    college = models.CharField(max_length=50, null=True)
+    ppg = models.FloatField(null= True)
+    apg = models.FloatField(null= True)
+    rpg = models.FloatField(null= True) 
+    spg = models.FloatField(null= True)
+    per = models.FloatField(null = True)
     shoes = models.ManyToManyField(Shoes)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 

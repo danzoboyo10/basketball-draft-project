@@ -5,11 +5,19 @@
 <div class="card">
   <a href ="{% url 'detail' player.id %}">
     <div class="card-content">
-      <span class="card-title">{{ player.name }}</span>
+
+      <span class="card-titlePlayer">{{ player.name }}:</span>
+      {% if player.age > 0 %}
+      <p>Age: {{ player.age }}</p>
+      <p>Height: {{ player.height }}</p>
+      <p>Weight: {{ player.weight }}</p>
       <p>College: {{ player.college }}</p>
       <p>PPG: {{ player.ppg }}</p>
-      {% if player.age > 0 %}
-      <p>Age: {{ player.age }}</p> <br>
+      <p>APG: {{ player.apg }}</p>
+      <p>PPG: {{ player.rpg }}</p>
+      <p>SPG: {{ player.spg }}</p>
+      <p>PER: {{ player.per }}</p>
+     
       <button class="detailsBtn"> View Details </button>
       {% else %}
       <p>Age: n/a</p>

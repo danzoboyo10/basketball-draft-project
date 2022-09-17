@@ -6,11 +6,24 @@
   <div class="col s6">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{ player.name }}</span>
-        <p>College: {{ player.college }}</p>
-        <p>PPG: {{ player.ppg }}</p>
-        {% if player.age > 0 %}
-        <p>Age: {{ player.age }}</p>
+        <span class="card-titlePlayer">{{ player.name }}:</span>
+        <ul class="playerKey">
+          <li class = "playerKey">| PPG - points per game |</li>
+          <li class = "playerKey">| APG - Assists per game |</li>
+          <li class = "playerKey">| RPG - Rebounds per game |</li>
+          <li class = "playerKey">| SPG - Steals per game |</li>
+          <li class = "playerKey">| PER - Player efficiency rating |</li>
+        </ul>
+          {% if player.age > 0 %}
+          <p>Age: {{ player.age }}</p>
+          <p>Height: {{ player.height }}</p>
+          <p>Weight: {{ player.weight }}</p>
+          <p>College: {{ player.college }}</p>
+          <p>PPG: {{ player.ppg }}</p>
+          <p>APG: {{ player.apg }}</p>
+          <p>PPG: {{ player.rpg }}</p>
+          <p>SPG: {{ player.spg }}</p>
+          <p>PER: {{ player.per }}</p>
         {% else %}
         <p>Age: n/a</p>
         {% endif %}

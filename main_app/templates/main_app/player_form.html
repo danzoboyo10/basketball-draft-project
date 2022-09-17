@@ -6,6 +6,15 @@
 
 <h1 class = "addPlayerHeader"> <i class="em em-man-bouncing-ball" aria-role="presentation" aria-label=""></i> Add a Player <i class="em em-woman-bouncing-ball" aria-role="presentation" aria-label=""></i> </h1>
 {% endif %}
+<ul class="playerKey">
+  <li class = "playerKey">| PPG - points per game |</li>
+  <li class = "playerKey">| APG - Assists per game |</li>
+  <li class = "playerKey">| RPG - Rebounds per game |</li>
+  <li class = "playerKey">| SPG - Steals per game |</li>
+  <li class = "playerKey">| PER - Player efficiency rating |</li>
+</ul>
+  
+ 
 <form action="" method="post">
   {% csrf_token %}
   <table>
@@ -13,4 +22,6 @@
   </table>
   <input type="submit" value="SUBMIT PLAYER" class="btn" />
 </form>
+
+
 {% endblock %}

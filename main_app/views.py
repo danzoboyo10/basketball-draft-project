@@ -9,6 +9,7 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.http import Http404
 
 import uuid
 import boto3
@@ -91,7 +92,7 @@ def signup(request):
 
 class PlayerCreate(LoginRequiredMixin, CreateView):
   model = Player
-  fields = ['name', 'age', 'college', 'ppg']
+  fields = ['name', 'age', 'height', 'weight', 'college', 'ppg', 'apg', 'rpg', 'spg', 'per'] 
   success_url = '/players/'
 
   def form_valid(self, form):
@@ -102,7 +103,7 @@ class PlayerCreate(LoginRequiredMixin, CreateView):
 
 class PlayerUpdate(LoginRequiredMixin, UpdateView):
   model = Player
-  fields = ['name', 'age', 'college', 'ppg']
+  fields = ['name', 'age', 'height', 'weight', 'college', 'ppg', 'apg', 'rpg', 'spg', 'per'] 
   success_url = '/players/'
   
 
@@ -140,6 +141,9 @@ class ShoeDelete(LoginRequiredMixin, DeleteView):
   model = Shoes
   fields = '__all__'
   success_url = '/shoes/'
+
+
+
 
   
 
