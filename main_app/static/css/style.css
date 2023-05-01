@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 body {
-  background-image: url("https://wallpapers-hub.art/wallpaper-images/406206.jpg");  
+  background-image: url("https://media.istockphoto.com/id/469569138/photo/basketball-fans-at-basketball-arena.jpg?s=612x612&w=0&k=20&c=UWIWCtGruzE7jj-mpJ4MFaAtnvvKhGc7m7dnZWRvQro=");
   background-size: cover;
   display: flex;
   min-height: 100vh;
   color: white;
   flex-direction: column;
-}
+} 
 
 a.left.brand-logo {
-  color: black;
-  text-shadow: .5px .5px orange;
+  font-family: "consolas", monospace;
+  color: white;
   padding-left: 20px;
 }
 
 .navItemStyling {
+  font-family: "consolas", monospace;
   color: white;
-  text-shadow: 2px 1px orange;
   font-size: 20px;
   display: inline;
 }
@@ -35,8 +35,9 @@ label {
 .playerKey {
   color: rgb(251, 182, 22);
   font-size: 15px;
+  text-align: center;
   display: inline-block;
-  padding-left: 7px;
+  padding-left: 50px;
 }
 
 footer {
@@ -45,15 +46,19 @@ footer {
 }
 
 div.nav-wrapper {
-  background-color: grey;
-
+  background-color: black;
 }
 
 footer.page-footer {
-  background-color: grey;
+  background-color: black;
   padding-right: 10px;
-  color: black;
-  text-shadow: .5px .5px orange;
+  font-family: "consolas", monospace;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   padding-bottom: 3px;
   padding-right: 40px;
   font-size: 20px;
@@ -66,21 +71,38 @@ h1 {
 input {
   color: white;
 }
+div.card-action {
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+}
 .card-title {
-  color: black;
+  color: whitesmoke;
   font-size: 25px;
   font-weight: bold;
 }
+span.card-titlePlayer {
+  color: whitesmoke;
+  font-size: 35px;
+  font-weight: bold;
+}
+.card-content {
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+}
 
 .card-titlePlayer {
-text-align: center;  
-color: black;
+  text-align: center;
+  color: black;
   font-size: 25px;
   font-weight: bold;
 }
 
 p {
-  color: black;
+  color: white;
 }
 #bron {
   height: 550px;
@@ -91,11 +113,17 @@ p {
   float: inline-end;
 }
 #bball-list {
+  font-family: "consolas", monospace;
+  text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-text-stroke: 3px black;
+  padding-right: 50px;
+  
   text-align: center;
 }
-/* input#id_name {
-  background-color: black;
-} */
+
 /* input#id_age {
   background-color: white
 } */
@@ -113,8 +141,8 @@ input#id_shoes {
 } */
 
 #aboutNav {
+  font-family: "consolas", monospace;
   color: white;
-  text-shadow: 2px 1px orange;
   font-size: 20px;
 }
 
@@ -127,22 +155,24 @@ input#id_shoes {
 #signupNav {
   color: white;
   text-shadow: 2px 1px orange;
-  font-size: 20px;
+  font-size: 10px;
 }
 
-#AttentionHead {
-  color: whitesmoke;
-  text-shadow: 2px 1px orange;
-  font-family: 'Poppins', sans-serif;
+#attentionHead {
+  font-family: "consolas", monospace;
   text-align: center;
+  font-size: 60px;
+  color: whitesmoke;
+  -webkit-text-stroke: 4px black;
 }
 
 #signupIf {
-  color: whitesmoke;
-  text-shadow: 2px 1px grey;
-  font-family: 'Poppins', sans-serif;
+  font-family: "consolas", monospace;
+  text-align: center;
   font-size: 40px;
-  float: left;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-text-stroke: 3px black;
   padding-right: 50px;
 }
 
@@ -183,8 +213,28 @@ input#id_shoes {
   display: inline;
   color: blue;
 }
+.loginTitle {
+  font-family: "consolas", monospace;
+  text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  -webkit-text-stroke: 4px black;
+}
+.signUpTitle {
+  font-family: "consolas", monospace;
+  text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  -webkit-text-stroke: 4px black;
+}
 
 .shoeHeader {
+  font-family: "consolas", monospace;
+  text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-text-stroke: 5px black;
   text-align: center;
 }
 
@@ -193,14 +243,28 @@ input#id_shoes {
 }
 
 .addShoeHead {
+  font-family: "consolas", monospace;
   text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-text-stroke: 5px black;
+  text-align: center;
+
 }
 
 .editShoeHead {
   text-align: center;
 }
 
+
 .addPlayerHeader {
+  font-family: "consolas", monospace;
+  text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  text-align: center;
+  -webkit-text-stroke: 5px black;
   text-align: center;
 }
 
@@ -214,11 +278,29 @@ input#id_shoes {
 }
 
 .aboutParagraph {
-  color: white;
+  padding-bottom: 5px;
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+  height: 100%;
+  border-radius: 5%;
+  background-image: no-repeat;
+  background-size: cover;
+  font-family: "consolas", monospace;
+  display: flex;
+  text-align: center;
+  font-size: 40px;
+  -webkit-text-stroke: 1.5px black;
+
 }
 
 #ourStory {
+  font-family: "consolas", monospace;
   text-align: center;
+  font-size: 70px;
+  color: whitesmoke;
+  -webkit-text-stroke: 4px black;
 }
 
 .detailsBtn {
@@ -226,21 +308,38 @@ input#id_shoes {
   color: #fff;
   background-color: #26a69a;
   text-align: center;
-  letter-spacing: .5px;
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
+  letter-spacing: 0.5px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
   padding: 5px;
   cursor: pointer;
 }
+
+th {
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  border-width: dotted;
+  width: 10%;
+}
+td {
+  background-color: grey;
+  border-style: solid;
+  border-color: black;
+  border-width: dotted;
+}
+
+
+
 
 .addShoesBtn {
   text-decoration: none;
   color: #fff;
   background-color: #26a69a;
   text-align: center;
-  letter-spacing: .5px;
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
+  letter-spacing: 0.5px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
   padding: 5px;
   cursor: pointer;
 }
@@ -250,9 +349,9 @@ input#id_shoes {
   color: #fff;
   background-color: #26a69a;
   text-align: center;
-  letter-spacing: .5px;
-  -webkit-transition: background-color .2s ease-out;
-  transition: background-color .2s ease-out;
+  letter-spacing: 0.5px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
   padding: 5px;
   cursor: pointer;
 }
@@ -260,11 +359,19 @@ input#id_shoes {
 #aboutParagraph {
   font-size: 45px;
   color: white;
-  font-family: 'Poppins', sans-serif;
-} 
+  font-family: "Poppins", sans-serif;
+}
 
 .btn {
-  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: 0.5px;
+  -webkit-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  /* padding: 5px; */
+  cursor: pointer;
 }
 
 .detailsBtn {
